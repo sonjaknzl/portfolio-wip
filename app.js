@@ -1,6 +1,6 @@
 gsap.registerPlugin(ScrollTrigger);
 
-// Enable smoothScrolling
+// ENABLE SMOOTH SCROLLING
 smoothScroll("#content");
 
 function smoothScroll(content, viewport, smoothness) {
@@ -94,9 +94,30 @@ function smoothScroll(content, viewport, smoothness) {
   });
 }
 
+// ANIMATE START SCREEN
+// let tl = gsap.timeline({
+//     scrollTrigger: {
+//       scrub: true,
+//       trigger: ".slide1",
+//       end: "20% top",
+//       pin: true,
+//       markers: true,
+//     },
+//     ease: "SloMo.easeOut",
+// });
+// tl.to(".moveUp",{y: '0%', duration: 0.5})
+//   .to("#scrolltxt1", { y: '0%', duration: 0.7, stagger: 0.2 })
+// .to("#scrolltxt2", {y: '0%', duration: 0.7, stagger: 0.2});
 
-// Enable Horzontal Scrolling while Scrolling vertically
+let intro = gsap.timeline({ ease: "SloMo.easeOut" });
+intro.to("#introtxt1", {y: '0%', duration: 0.5});
+intro
+  .to("#introtxt2", { y: "0%", duration: 0.5, delay: -0.2 })
+  .to("#scrolltxt1", { y: "0%", duration: 0.5, delay: -0.2 })
+  .to("#scrolltxt2", { y: "0%", duration: 0.5, delay: -0.2 });
 
+
+// SECTION OF WORDS SCROLLING HORIZONTALLY
 gsap.set(".wrapper", { xPercent: -50, yPercent: -50 });
 no01 = document.querySelectorAll("#no1 .box");
 no02 = document.querySelectorAll("#no2 .box");
@@ -250,23 +271,6 @@ gsap.to(".boxes", {
     immediateRender: false,
   },
   y: -294,
-});
-
-gsap.set(".pinLine", {
-  height: 0.01,
-  opacity: 0
-});
-
-gsap.to(".pinLine", {
-  scrollTrigger: {
-    scrub: true,
-    trigger: ".slide1",
-    end: "20% top",
-    pin: true,
-    markers: true,
-  },
-  height: 85,
-  opacity: 100,
 });
 
 gsap.to(".pinCircle", {

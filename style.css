@@ -294,8 +294,8 @@ img:hover {
   padding: 0;
   width: 0;
   position: absolute;
-  top: -00%;
-  left: -15px;
+  top: 0%;
+  left: 10%;
 }
 .pinCircle {
   border: 2px dotted white;
@@ -307,6 +307,16 @@ img:hover {
   top: 70%;
   left: 0%;
 }
-p {
-  font-family: Univa;
+.hideOverfl {
+  overflow: hidden;
+  /* background-color: grey; */
 }
+.splitUpw {
+  display: inline-block;
+  transform: translateY(100%);
+}
+.splitUpwH1 {
+  display: inline-block;
+  transform: translateY(110%);
+}
+
