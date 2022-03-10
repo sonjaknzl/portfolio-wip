@@ -285,10 +285,12 @@ a {
 #no4 {
   top: 50%;
   margin: 0;
+  left: 20%;
 }
 #no3 {
   top: -50%;
   margin: 0;
+  left: 20%;
 }
 /* #no1{
   background-color: green;

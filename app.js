@@ -98,9 +98,6 @@ function smoothScroll(content, viewport, smoothness) {
 // Enable Horzontal Scrolling while Scrolling vertically
 
 gsap.set(".wrapper", { xPercent: -50, yPercent: -50 });
-// gsap.set(".boxes", { x: -50 });
-gsap.set(".one", { x: -50 });
-
 no01 = document.querySelectorAll("#no1 .box");
 no02 = document.querySelectorAll("#no2 .box");
 no03 = document.querySelectorAll("#no3 .box");
