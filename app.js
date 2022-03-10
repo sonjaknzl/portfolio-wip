@@ -45,12 +45,12 @@ function smoothScroll(content, viewport, smoothness) {
     requestAnimationFrame(removeScroll);
   });
   ScrollTrigger.defaults({ scroller: content });
-  ScrollTrigger.prototype.update = (p) => p; 
+  ScrollTrigger.prototype.update = (p) => p;
 
   ScrollTrigger.scrollerProxy(content, {
     scrollTop(value) {
       if (arguments.length) {
-        isProxyScrolling = true; 
+        isProxyScrolling = true;
         setProp(-value);
         setScroll(value);
         return;
@@ -95,27 +95,13 @@ function smoothScroll(content, viewport, smoothness) {
 }
 
 // ANIMATE START SCREEN
-// let tl = gsap.timeline({
-//     scrollTrigger: {
-//       scrub: true,
-//       trigger: ".slide1",
-//       end: "20% top",
-//       pin: true,
-//       markers: true,
-//     },
-//     ease: "SloMo.easeOut",
-// });
-// tl.to(".moveUp",{y: '0%', duration: 0.5})
-//   .to("#scrolltxt1", { y: '0%', duration: 0.7, stagger: 0.2 })
-// .to("#scrolltxt2", {y: '0%', duration: 0.7, stagger: 0.2});
-
 let intro = gsap.timeline({ ease: "SloMo.easeOut" });
-intro.to("#introtxt1", {y: '0%', duration: 0.5});
+intro.to("#introtxt1", { y: "0%", duration: 0.5 });
 intro
   .to("#introtxt2", { y: "0%", duration: 0.5, delay: -0.2 })
+  .to(".svgContainer", {y: "-10%", x:"0%", duration: 0.5, delay: -0.2 })
   .to("#scrolltxt1", { y: "0%", duration: 0.5, delay: -0.2 })
   .to("#scrolltxt2", { y: "0%", duration: 0.5, delay: -0.2 });
-
 
 // SECTION OF WORDS SCROLLING HORIZONTALLY
 gsap.set(".wrapper", { xPercent: -50, yPercent: -50 });
@@ -273,20 +259,19 @@ gsap.to(".boxes", {
   y: -294,
 });
 
-gsap.to(".pinCircle", {
-  scrollTrigger: {
-    scrub: true,
-    trigger: ".slide2",
-    start: "35% center",
-    end: "40% 30%",
-    pin: true,
-    // end: "=+1000",
-    // markers: true,
-  },
-  rotation: -360,
-  onEnter: myFunction()
-});
-
+// gsap.to(".pinCircle", {
+//   scrollTrigger: {
+//     scrub: true,
+//     trigger: ".slide2",
+//     start: "35% center",
+//     end: "40% 30%",
+//     pin: true,
+//     // end: "=+1000",
+//     // markers: true,
+//   },
+//   rotation: -360,
+//   onEnter: myFunction(),
+// });
 
 // // Get the id of the <path> element and the length of <path>
 // var triangle = document.getElementById("triangle");
@@ -308,4 +293,3 @@ gsap.to(".pinCircle", {
 //   // Reverse the drawing (when scrolling upwards)
 //   triangle.style.strokeDashoffset = length - draw;
 // }
-
