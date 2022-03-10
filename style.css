@@ -234,7 +234,7 @@ a {
   transform: translateY(120%);
 }
 .shortDesc {
-  /* display: inline-block; */
+  position: relative;
   text-align: left;
   /* float: right; */
   left: 82.85%;
@@ -343,6 +343,15 @@ img:hover {
   margin-top: 5px;
   display: flex;
   justify-content: space-between;
+}
+.pinLine {
+  order: 1px solid white;
+  height: 100%;
+  padding: 0;
+  width: 0;
+  position: absolute;
+  top: -00%;
+  left: -15px;
 }
 .pinCircle {
   border: 2px dotted white;

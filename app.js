@@ -105,10 +105,10 @@ no01 = document.querySelectorAll("#no1 .box");
 no02 = document.querySelectorAll("#no2 .box");
 no03 = document.querySelectorAll("#no3 .box");
 no04 = document.querySelectorAll("#no4 .box");
-const boxWidth = no01.item(0).offsetWidth + 30;
-const boxWidth2 = no02.item(0).offsetWidth + 50;
-const boxWidth3 = no03.item(0).offsetWidth + 50;
-const boxWidth4 = no04.item(0).offsetWidth + 50;
+const boxWidth = 515 + 30;
+const boxWidth2 = 469 + 50;
+const boxWidth3 = 1383 + 50;
+const boxWidth4 = 1341 + 50;
 totalWidth = boxWidth * 6; //  * n of boxes
 totalWidth2 = boxWidth2 * 6; //  * n of boxes
 totalWidth3 = boxWidth3 * 4;
@@ -122,10 +122,10 @@ var mod2 = gsap.utils.wrap(0, totalWidth2);
 var mod3 = gsap.utils.wrap(0, totalWidth3);
 var mod4 = gsap.utils.wrap(0, totalWidth4);
 
-console.log(no01.item(0).offsetWidth);
-console.log(no02.item(0).offsetWidth);
-console.log(no03.item(0).offsetWidth);
-console.log(no04.item(0).offsetWidth);
+// console.log(no01.item(0).offsetWidth);
+// console.log(no02.item(0).offsetWidth);
+// console.log(no03.item(0).offsetWidth);
+// console.log(no04.item(0).offsetWidth);
 
 gsap.set(no01, {
   x: function (i) {
