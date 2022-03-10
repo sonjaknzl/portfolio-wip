@@ -345,7 +345,7 @@ img:hover {
   justify-content: space-between;
 }
 .pinLine {
-  order: 1px solid white;
+  border: 1px solid white;
   height: 100%;
   padding: 0;
   width: 0;
