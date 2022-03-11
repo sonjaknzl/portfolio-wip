@@ -293,3 +293,15 @@ gsap.to(".boxes", {
 //   // Reverse the drawing (when scrolling upwards)
 //   triangle.style.strokeDashoffset = length - draw;
 // }
+// gsap.to("#contact", {
+//   scrollTrigger: {
+//     trigger: ".contact",
+//     start: "top center",
+//     endTrigger: ".showcaseThree",
+//     scrub: true,
+//     end: "top 70%",
+//     markers: true,
+//     immediateRender: false,
+//   },
+//   y: -294,
+// });
