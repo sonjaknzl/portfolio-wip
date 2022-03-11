@@ -99,7 +99,7 @@ let intro = gsap.timeline({ ease: "SloMo.easeOut" });
 intro.to("#introtxt1", { y: "0%", duration: 0.5 });
 intro
   .to("#introtxt2", { y: "0%", duration: 0.5, delay: -0.2 })
-  .to(".svgContainer", {y: "-10%", x:"0%", duration: 0.5, delay: -0.2 })
+  .to("#svgContainer1", { y: "-10%", x: "0%", duration: 0.5, delay: -0.2 })
   .to("#scrolltxt1", { y: "0%", duration: 0.5, delay: -0.2 })
   .to("#scrolltxt2", { y: "0%", duration: 0.5, delay: -0.2 });
 
@@ -242,7 +242,7 @@ gsap.to(".boxes", {
     end: "top 70%",
     // markers: true
   },
-  y: -147,
+  y: -148,
 });
 
 //animateFonts upwards two
@@ -256,7 +256,7 @@ gsap.to(".boxes", {
     // markers: true,
     immediateRender: false,
   },
-  y: -294,
+  y: -296,
 });
 
 // gsap.to(".pinCircle", {
@@ -273,35 +273,44 @@ gsap.to(".boxes", {
 //   onEnter: myFunction(),
 // });
 
-// // Get the id of the <path> element and the length of <path>
-// var triangle = document.getElementById("triangle");
-// var length = triangle.getTotalLength();
-
-// // The start position of the drawing
-// triangle.style.strokeDasharray = length;
-
-// // Hide the triangle by offsetting dash. Remove this line to show the triangle before scroll draw
-// triangle.style.strokeDashoffset = length;
-
-// // Find scroll percentage on scroll (using cross-browser properties), and offset dash same amount as percentage scrolled
-
-// function myFunction() {
-//   var scrollpercent = (document.body.scrollTop + document.documentElement.scrollTop-1080) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
-
-//   var draw = length * -scrollpercent*6;
-
-//   // Reverse the drawing (when scrolling upwards)
-//   triangle.style.strokeDashoffset = length - draw;
-// }
-// gsap.to("#contact", {
-//   scrollTrigger: {
-//     trigger: ".contact",
-//     start: "top center",
-//     endTrigger: ".showcaseThree",
-//     scrub: true,
-//     end: "top 70%",
-//     markers: true,
-//     immediateRender: false,
-//   },
-//   y: -294,
-// });
+let contact = gsap.timeline({
+  ease: "SloMo.easeOut",
+  scrollTrigger: {
+    trigger: "#contact",
+    start: "60% bottom",
+    // end: "top top",
+    toggleActions: "restart pause resume reverse",
+    markers: true,
+  }
+});
+contact.to("#contactTxt1", {
+  y: "0%",
+  duration: 0.5,
+  delay: -0.3,
+});
+contact.to("#contactTxt2", {
+  y: "0%",
+  duration: 0.5,
+  delay: -0.3,
+});
+contact.to("#contactTxt3", {
+  y: "0%",
+  duration: 0.5,
+  delay: -0.3,
+});
+contact.to("#svgContainer2", {
+  y: "0%",
+  x: "0%",
+  duration: 0.5,
+  delay: -0.3,
+});
+contact.to("#contactTxt4", {
+  y: "0%",
+  duration: 0.5,
+  delay: -0.5,
+});
+contact.to(".contactLinkWrapper", {
+  y: "0%",
+  duration: 0.5,
+  delay: -0.5,
+});
